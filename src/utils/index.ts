@@ -1,0 +1,1 @@
+export { createDictionary } from './createDictionary';
