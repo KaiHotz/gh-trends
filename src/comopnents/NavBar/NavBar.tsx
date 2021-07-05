@@ -35,7 +35,7 @@ export const NavBar: FC = () => {
               { value: 'foo', label: 'Foo' },
               { value: 'bar', label: 'Bar' },
             ]}
-            label={fm(messages.spoken_lang, { value: spoken_language_code })}
+            label={fm(messages.spoken_lang, { value: <span>{spoken_language_code}</span> })}
             filterTxt={fm(messages.spoken_lang_filter)}
             value={spoken_language_code}
             onChange={(value) => dispatch(setSpokenLanguage(value))}
@@ -46,7 +46,7 @@ export const NavBar: FC = () => {
             { value: 'foo', label: 'Foo' },
             { value: 'bar', label: 'Bar' },
           ]}
-          label={fm(messages.lanuage, { value: prog_lang })}
+          label={fm(messages.lanuage, { value: <span>{prog_lang}</span> })}
           filterTxt={fm(messages.language_filter)}
           value={prog_lang}
           onChange={(value) => dispatch(setProgLanguage(value))}
@@ -57,7 +57,7 @@ export const NavBar: FC = () => {
             { value: 'weekly', label: fm(messages.weekly) },
             { value: 'monthly', label: fm(messages.monthly) },
           ]}
-          label={fm(messages.date_range, { value: fm(messages[since as Since]) })}
+          label={fm(messages.date_range, { value: <span>{fm(messages[since as Since])}</span> })}
           filterTxt={fm(messages.date_range_filter)}
           value={since}
           onChange={(value) => dispatch(setSince(value))}

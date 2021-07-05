@@ -17,6 +17,9 @@ export const StyledButtonInvisible = styled(ButtonInvisible)`
   font-weight: 400;
   color: var(--color-text-secondary);
   padding: 0 15px;
+  span {
+    font-weight: bold;
+  }
   &:focus {
     box-shadow: none;
   }
@@ -26,8 +29,8 @@ export const StyledButtonInvisible = styled(ButtonInvisible)`
     content: '';
     display: inline-block;
     height: 0;
-    vertical-align: -3px;
-    margin-left: 3px;
+    vertical-align: -2px;
+    margin-left: 4px;
     width: 0;
   }
 `;
