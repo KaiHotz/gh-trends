@@ -14,8 +14,6 @@ export const Trending: FC = () => {
   const { formatMessage: fm } = useIntl();
   const { since } = useSelector(trendSelector);
 
-  console.log(messages);
-
   return (
     <div>
       <StyledPageHeader>

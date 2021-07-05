@@ -6,10 +6,26 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:KaiHotz/gh-trending.git"
+    "url": "git@github.com:KaiHotz/gh-trends.git"
   },
   "private": true,
-  "homepage": "https://KaiHotz.github.io/gh-trending",
+  "homepage": "https://KaiHotz.github.io/gh-trends",
+  "scripts": {
+    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "rimraf build && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "yarn run check-types && yarn run eslint && yarn run stylelint",
+    "lint:fix": "yarn run eslint:fix && yarn run stylelint:fix",
+    "eslint": "eslint . --ext .js,.jsx,.tsx,.ts",
+    "eslint:fix": "eslint . --ext .js,.jsx,.tsx,.ts --fix",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix",
+    "check-types": "tsc",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@babel/runtime": "^7.14.6",
     "@primer/components": "^28.2.5",
@@ -74,20 +90,6 @@
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.19.0",
     "typescript": "^4.1.2"
-  },
-  "scripts": {
-    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
-    "build": "rimraf build && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "yarn run check-types && yarn run eslint && yarn run stylelint",
-    "lint:fix": "yarn run eslint:fix && yarn run stylelint:fix",
-    "eslint": "eslint . --ext .js,.jsx,.tsx,.ts",
-    "eslint:fix": "eslint . --ext .js,.jsx,.tsx,.ts --fix",
-    "stylelint": "stylelint \"**/*.scss\"",
-    "stylelint:fix": "stylelint \"**/*.scss\" --fix",
-    "check-types": "tsc"
   },
   "browserslist": [
     ">0.2%",

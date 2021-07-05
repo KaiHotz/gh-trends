@@ -20,10 +20,10 @@ export const NavBar: FC = () => {
     <div className="Box-header d-md-flex flex-items-center flex-justify-between">
       <SubNav aria-label="Trending">
         <SubNav.Links>
-          <SubNav.Link href="/" selected={!isDeveloper}>
+          <SubNav.Link href={routePath.main} selected={!isDeveloper}>
             {fm(messages.repositories)}
           </SubNav.Link>
-          <SubNav.Link href="/developers" selected={isDeveloper}>
+          <SubNav.Link href={routePath.developers} selected={isDeveloper}>
             {fm(messages.developers)}
           </SubNav.Link>
         </SubNav.Links>

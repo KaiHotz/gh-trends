@@ -1,4 +1,4 @@
 export const routePath = {
-  main: '/',
-  developers: '/developers',
+  main: '/gh-trends',
+  developers: '/gh-trends/developers',
 };
