@@ -26,7 +26,7 @@ export const Trending: FC = () => {
         <BorderBox className="Box Box--responsive hx_Box--firstRowRounded0">
           <NavBar />
           <Switch>
-            <Route exact path={[routePath.main, routePath.repos]} component={Repositories} />
+            <Route exact path={routePath.main} component={Repositories} />
             <Route exact path={routePath.developers} component={Developers} />
           </Switch>
         </BorderBox>

@@ -20,7 +20,7 @@ export const NavBar: FC = () => {
     <div className="Box-header d-md-flex flex-items-center flex-justify-between">
       <SubNav aria-label="Trending">
         <SubNav.Links>
-          <SubNav.Link to={routePath.repos} as={NavLink} isActive={() => !isDeveloper}>
+          <SubNav.Link to={routePath.main} as={NavLink} isActive={() => !isDeveloper}>
             {fm(messages.repositories)}
           </SubNav.Link>
           <SubNav.Link to={routePath.developers} as={NavLink}>
