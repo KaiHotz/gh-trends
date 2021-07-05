@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useIntl } from 'react-intl';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import { SubNav, Flex } from '@primer/components';
 import { trendSelector, setSpokenLanguage, setProgLanguage, setSince } from '../../store/trending';
 import { Since } from '../../api';
@@ -20,10 +20,10 @@ export const NavBar: FC = () => {
     <div className="Box-header d-md-flex flex-items-center flex-justify-between">
       <SubNav aria-label="Trending">
         <SubNav.Links>
-          <SubNav.Link href={routePath.main} selected={!isDeveloper}>
+          <SubNav.Link to={routePath.repos} as={NavLink} isActive={() => !isDeveloper}>
             {fm(messages.repositories)}
           </SubNav.Link>
-          <SubNav.Link href={routePath.developers} selected={isDeveloper}>
+          <SubNav.Link to={routePath.developers} as={NavLink}>
             {fm(messages.developers)}
           </SubNav.Link>
         </SubNav.Links>
