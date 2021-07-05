@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gh-trends/static/css/main.bc69d588.chunk.css",
+    "main.js": "/gh-trends/static/js/main.a8baf797.chunk.js",
+    "main.js.map": "/gh-trends/static/js/main.a8baf797.chunk.js.map",
+    "runtime-main.js": "/gh-trends/static/js/runtime-main.69fa4fb2.js",
+    "runtime-main.js.map": "/gh-trends/static/js/runtime-main.69fa4fb2.js.map",
+    "static/js/2.71a4329c.chunk.js": "/gh-trends/static/js/2.71a4329c.chunk.js",
+    "static/js/2.71a4329c.chunk.js.map": "/gh-trends/static/js/2.71a4329c.chunk.js.map",
+    "static/js/3.78df9043.chunk.js": "/gh-trends/static/js/3.78df9043.chunk.js",
+    "static/js/3.78df9043.chunk.js.map": "/gh-trends/static/js/3.78df9043.chunk.js.map",
+    "index.html": "/gh-trends/index.html",
+    "static/css/main.bc69d588.chunk.css.map": "/gh-trends/static/css/main.bc69d588.chunk.css.map",
+    "static/js/2.71a4329c.chunk.js.LICENSE.txt": "/gh-trends/static/js/2.71a4329c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69fa4fb2.js",
+    "static/js/2.71a4329c.chunk.js",
+    "static/css/main.bc69d588.chunk.css",
+    "static/js/main.a8baf797.chunk.js"
+  ]
+}
