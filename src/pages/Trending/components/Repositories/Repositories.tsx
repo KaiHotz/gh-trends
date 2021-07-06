@@ -18,8 +18,6 @@ export const Repositories: FC = () => {
     spoken_language_code
   });
 
-  console.log(data)
-
   return (
     <div>
       {data ? data.map((repo) => (
