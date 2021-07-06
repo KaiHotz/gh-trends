@@ -11,9 +11,14 @@ const { reducer, actions } = createSlice({
   name: 'LANGUAGE',
   initialState,
   reducers: {
-    setSpokenLanguage: (state, { payload }) => ({ ...state, spoken_language_code: payload }),
-    setProgLanguage: (state, { payload }) => ({ ...state, prog_lang: payload }),
-    setSince: (state, { payload }) => ({ ...state, since: payload }),
+    setSpokenLanguage: (state, { payload }) => ({ ...state, spoken_language_code: payload, prog_lang: initialState.prog_lang }),
+    setProgLanguage: (state, { payload }) => ({
+      ...state,
+      prog_lang: payload,
+      spoken_language_code: initialState.spoken_language_code,
+      since: initialState.since,
+    }),
+    setSince: (state, { payload }) => ({ ...state, since: payload, prog_lang: initialState.prog_lang }),
   },
 });
 export const { setProgLanguage, setSpokenLanguage, setSince } = actions;
