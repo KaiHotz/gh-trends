@@ -10,6 +10,7 @@ import { messages } from './dictionary';
 export const Repositories: FC = () => {
   const { formatMessage: fm } = useIntl();
   const { since, prog_lang, spoken_language_code } = useSelector(trendSelector);
+  const color = '#8b949e';
 
   const { data, isFetching } = useRepositories({
     since,
@@ -33,12 +34,12 @@ export const Repositories: FC = () => {
                 <StarIcon /> {fm(messages.star)}
               </Button>
             </Flex>
-            <Text as="p" fontSize={14} style={{ maxWidth: '70%' }} color="#8b949e">
+            <Text as="p" fontSize={14} style={{ maxWidth: '70%' }} color={color}>
               {repo.description}
             </Text>
             <Flex justifyContent="space-between" alignItems="center">
               <div>
-                <Text as="span" mr={3} fontSize={12} color="#8b949e">
+                <Text as="span" mr={3} fontSize={12} color={color}>
                   {repo.language}
                 </Text>
                 <Link muted mr={3} href={`${repo.url}/stargazers/`}>
@@ -47,7 +48,7 @@ export const Repositories: FC = () => {
                 <Link muted mr={3} href={`${repo.url}/network/members.${repo.username}`}>
                   <RepoForkedIcon /> {` ${repo.forks}`}
                 </Link>
-                <Text as="span" mr={3} fontSize={12} color="#8b949e">
+                <Text as="span" mr={3} fontSize={12} color={color}>
                   {fm(messages.build_by)}
                 </Text>
                 {repo.builtBy.map((user) => (
@@ -56,7 +57,7 @@ export const Repositories: FC = () => {
                   </Link>
                 ))}
               </div>
-              <Text as="p" m={0} fontSize={12} color="#8b949e">
+              <Text as="p" m={0} fontSize={12} color={color}>
                 <StarIcon /> {`${repo.starsSince} ${fm(messages[since as Since])}`}
               </Text>
             </Flex>
