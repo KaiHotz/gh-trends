@@ -10,7 +10,6 @@ import { messages } from './dictionary';
 export const Developers: FC = () => {
   const { formatMessage: fm } = useIntl();
   const { since, prog_lang } = useSelector(trendSelector);
-
   const color = '#8b949e';
 
   const { data, isFetching } = useDevelopers({
