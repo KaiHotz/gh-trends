@@ -18,8 +18,6 @@ export const Developers: FC = () => {
     prog_lang,
   });
 
-  console.log(data);
-
   return (
     <div>
       {data ? (
