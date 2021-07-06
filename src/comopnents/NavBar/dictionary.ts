@@ -12,4 +12,5 @@ export const messages = createDictionary('trending', {
   daily: 'Today',
   weekly: 'This week',
   monthly: 'This month',
+  any: 'Any',
 });

@@ -1,4 +1,4 @@
-export type Since = 'daily' | 'weekly' | 'monthly';
+import { Since, LangCode, ProgLang } from '../../types';
 
 export interface IBuiltBy {
   username: string;
@@ -14,7 +14,7 @@ export interface IPopularRepository {
 
 export interface IDevelopersQueryParams {
   since?: Since;
-  prog_lang?: string;
+  prog_lang?: ProgLang;
 }
 
 export interface IRepository {
@@ -33,7 +33,7 @@ export interface IRepository {
 }
 
 export interface IReopsitoriesQueryParams extends IDevelopersQueryParams {
-  spoken_language_code?: string;
+  spoken_language_code?: LangCode;
 }
 
 export interface IDeveloper {

@@ -3,7 +3,7 @@ import { SelectMenu } from '@primer/components';
 import { StyledButtonInvisible } from '../StyledComponents';
 
 export interface ISelectOption {
-  value: string;
+  value?: string;
   label: string;
 }
 
@@ -11,8 +11,8 @@ export interface ISelectProps {
   options: ISelectOption[];
   label: ReactNode;
   filterTxt: string;
-  value: string;
-  onChange: (val: string) => void;
+  value?: string;
+  onChange: (val?: string) => void;
 }
 
 export const Select: FC<ISelectProps> = ({ options, label, filterTxt, value, onChange }) => {
@@ -20,7 +20,7 @@ export const Select: FC<ISelectProps> = ({ options, label, filterTxt, value, onC
 
   const filteredOptions = options.filter((option) => option.label.toLowerCase().startsWith(filter.toLowerCase()));
 
-  const handleChange = (val: string) => onChange(val);
+  const handleChange = (val?: string) => onChange(val);
 
   return (
     <SelectMenu css={{}} defaultValue="foo">

@@ -1,7 +1,7 @@
-import { Since } from '../../api/facades/trending';
+import { Since, LangCode, ProgLang } from '../../api';
 
 export interface ITrendingState {
   since: Since;
-  prog_lang: string;
-  spoken_language_code: string;
+  prog_lang?: ProgLang;
+  spoken_language_code?: LangCode;
 }

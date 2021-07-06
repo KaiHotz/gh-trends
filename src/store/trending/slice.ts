@@ -3,8 +3,8 @@ import { ITrendingState } from './types';
 
 const initialState: ITrendingState = {
   since: 'daily',
-  prog_lang: 'any',
-  spoken_language_code: 'any',
+  prog_lang: undefined,
+  spoken_language_code: undefined,
 };
 
 const { reducer, actions } = createSlice({

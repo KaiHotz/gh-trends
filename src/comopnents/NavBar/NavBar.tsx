@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, NavLink } from 'react-router-dom';
 import { SubNav, Flex } from '@primer/components';
 import { trendSelector, setSpokenLanguage, setProgLanguage, setSince } from '../../store/trending';
-import { Since } from '../../api';
+import { Since, LangCode } from '../../api';
 import { routePath } from '../../routes';
+import { progLangOpt, spokenLangsOpt, spokenLangs } from '../../constants';
 import { Select } from '../Select';
 import { messages } from './dictionary';
 
@@ -31,22 +32,18 @@ export const NavBar: FC = () => {
       <Flex>
         {!isDeveloper && (
           <Select
-            options={[
-              { value: 'foo', label: 'Foo' },
-              { value: 'bar', label: 'Bar' },
-            ]}
-            label={fm(messages.spoken_lang, { value: <span>{spoken_language_code}</span> })}
+            options={spokenLangsOpt}
+            label={fm(messages.spoken_lang, {
+              value: <span>{spoken_language_code ? spokenLangs[spoken_language_code as LangCode].name : fm(messages.any)}</span>,
+            })}
             filterTxt={fm(messages.spoken_lang_filter)}
             value={spoken_language_code}
             onChange={(value) => dispatch(setSpokenLanguage(value))}
           />
         )}
         <Select
-          options={[
-            { value: 'foo', label: 'Foo' },
-            { value: 'bar', label: 'Bar' },
-          ]}
-          label={fm(messages.lanuage, { value: <span>{prog_lang}</span> })}
+          options={progLangOpt}
+          label={fm(messages.lanuage, { value: <span>{prog_lang || fm(messages.any)}</span> })}
           filterTxt={fm(messages.language_filter)}
           value={prog_lang}
           onChange={(value) => dispatch(setProgLanguage(value))}

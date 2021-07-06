@@ -6,9 +6,9 @@ import { messages } from './dictionary';
 export const Developers: FC = () => {
   const { formatMessage: fm } = useIntl();
 
-  // const { data } = useDevelopers();
+  const { data } = useDevelopers();
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <ul>
