@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
-import { Flex, Heading, Link, Button, Text, Avatar } from '@primer/components';
+import { Flex, Heading, Link, Button, Text, Avatar, Spinner } from '@primer/components';
 import { RepoIcon, StarIcon, RepoForkedIcon } from '@primer/octicons-react';
 import { trendSelector } from '../../../../store/trending';
 import { useRepositories, Since } from '../../../../api';
@@ -65,7 +65,7 @@ export const Repositories: FC = () => {
         ))
       ) : (
         <Heading fontSize={24} textAlign="center" m={5}>
-          {isFetching ? fm(messages.loading) : fm(messages.no_data)}
+          {isFetching ? <Spinner /> : fm(messages.no_data)}
         </Heading>
       )}
     </div>
