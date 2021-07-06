@@ -1,9 +1,8 @@
-/* eslint-disable */
 import React, { FC } from 'react';
 import { useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
 import { Flex, Heading, Link, Button, Text, Avatar } from '@primer/components';
-import { RepoIcon, StarIcon, RepoForkedIcon,  } from '@primer/octicons-react'
+import { RepoIcon, StarIcon, RepoForkedIcon } from '@primer/octicons-react';
 import { trendSelector } from '../../../../store/trending';
 import { useRepositories, Since } from '../../../../api';
 import { messages } from './dictionary';
@@ -15,12 +14,13 @@ export const Repositories: FC = () => {
   const { data, isFetching } = useRepositories({
     since,
     prog_lang,
-    spoken_language_code
+    spoken_language_code,
   });
 
   return (
     <div>
-      {data ? data.map((repo) => (
+      {data ? (
+        data.map((repo) => (
           <article key={repo.rank} className="Box-row">
             <Flex justifyContent="space-between" alignItems="center">
               <Heading fontSize={18}>
@@ -28,7 +28,7 @@ export const Repositories: FC = () => {
                 <Link ml={2} href={repo.url}>
                   {repo.repositoryName}
                 </Link>
-                </Heading>
+              </Heading>
               <Button fontSize={12}>
                 <StarIcon /> {fm(messages.star)}
               </Button>
@@ -41,10 +41,10 @@ export const Repositories: FC = () => {
                 <Text as="span" mr={3} fontSize={12} color="#8b949e">
                   {repo.language}
                 </Text>
-                <Link muted mr={3} href={`${repo.url}/stargazers/`} >
+                <Link muted mr={3} href={`${repo.url}/stargazers/`}>
                   <StarIcon /> {` ${repo.totalStars}`}
                 </Link>
-                <Link muted mr={3} href={`${repo.url}/network/members.${repo.username}`} >
+                <Link muted mr={3} href={`${repo.url}/network/members.${repo.username}`}>
                   <RepoForkedIcon /> {` ${repo.forks}`}
                 </Link>
                 <Text as="span" mr={3} fontSize={12} color="#8b949e">
@@ -61,9 +61,12 @@ export const Repositories: FC = () => {
               </Text>
             </Flex>
           </article>
-        )
-      ) : <Heading fontSize={24} textAlign="center" m={5}>{isFetching ? fm(messages.loading) : fm(messages.no_data)}</Heading>
-    }
+        ))
+      ) : (
+        <Heading fontSize={24} textAlign="center" m={5}>
+          {isFetching ? fm(messages.loading) : fm(messages.no_data)}
+        </Heading>
+      )}
     </div>
   );
 };
