@@ -18,6 +18,8 @@ export const Developers: FC = () => {
     prog_lang,
   });
 
+  console.log(data);
+
   return (
     <div>
       {data ? (
@@ -41,7 +43,7 @@ export const Developers: FC = () => {
                   </Link>
                   <Link muted href={user.url}>
                     <Text as="p" fontSize={16}>
-                      {user.name}
+                      {user.username}
                     </Text>
                   </Link>
                 </div>
