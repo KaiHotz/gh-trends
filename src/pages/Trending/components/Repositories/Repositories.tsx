@@ -25,7 +25,7 @@ export const Repositories: FC = () => {
             <Flex justifyContent="space-between" alignItems="center">
               <Heading fontSize={18}>
                 <RepoIcon />
-                <Link href={repo.url}>
+                <Link ml={2} href={repo.url}>
                   {repo.repositoryName}
                 </Link>
                 </Heading>
@@ -63,7 +63,7 @@ export const Repositories: FC = () => {
           </article>
         )
       ) : <Heading fontSize={24} textAlign="center" m={5}>{isFetching ? fm(messages.loading) : fm(messages.no_data)}</Heading>
-}
+    }
     </div>
   );
 };
