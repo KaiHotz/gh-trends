@@ -34,7 +34,7 @@ export const Select: FC<ISelectProps> = ({ options, label, filterTxt, value, onC
         />
         <SelectMenu.List>
           {filteredOptions.map((option) => (
-            <SelectMenu.Item key={option.value} selected={value === option.value} onClick={() => handleChange(option.value)}>
+            <SelectMenu.Item key={option.label} selected={value === option.value} onClick={() => handleChange(option.value)}>
               {option.label}
             </SelectMenu.Item>
           ))}
