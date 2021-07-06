@@ -34,7 +34,7 @@ export const Repositories: FC = () => {
                 <StarIcon /> {fm(messages.star)}
               </Button>
             </Flex>
-            <Text as="p" fontSize={14} style={{ maxWidth: '70%' }} color={color}>
+            <Text as="p" fontSize={14} sx={{ maxWidth: '75%' }} color={color}>
               {repo.description}
             </Text>
             <Flex justifyContent="space-between" alignItems="center">
