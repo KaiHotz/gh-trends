@@ -1,8 +1,9 @@
 import { LangCode } from '../api';
 
-type LanguageObj = {
+export type LanguageObj = {
   [key in LangCode]: { name: string; nativeName: string };
 };
+
 export const spokenLangs: LanguageObj = {
   'any': {
     'name': 'Any',
@@ -745,6 +746,7 @@ export const spokenLangs: LanguageObj = {
     'nativeName': 'Zulu',
   },
 };
+
 export const spokenLangsOpt = Object.keys(spokenLangs).map((code) => ({
   label: spokenLangs[code as LangCode].name,
   value: code === 'any' ? undefined : code,
