@@ -1,4 +1,4 @@
-# gh-trends
+# IMPORTANT !!!
 Sadly `gh-trending-api.herokuapp.com` has no CORS support.
 Therefor and to be able to fetch the Data you first need to opt in to CORS-anywhere.
 
