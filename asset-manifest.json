@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gh-trends/static/css/main.78724598.chunk.css",
-    "main.js": "/gh-trends/static/js/main.f910e547.chunk.js",
-    "main.js.map": "/gh-trends/static/js/main.f910e547.chunk.js.map",
+    "main.js": "/gh-trends/static/js/main.89298d18.chunk.js",
+    "main.js.map": "/gh-trends/static/js/main.89298d18.chunk.js.map",
     "runtime-main.js": "/gh-trends/static/js/runtime-main.097f5a27.js",
     "runtime-main.js.map": "/gh-trends/static/js/runtime-main.097f5a27.js.map",
     "static/js/2.193f6f97.chunk.js": "/gh-trends/static/js/2.193f6f97.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.097f5a27.js",
     "static/js/2.193f6f97.chunk.js",
     "static/css/main.78724598.chunk.css",
-    "static/js/main.f910e547.chunk.js"
+    "static/js/main.89298d18.chunk.js"
   ]
 }
